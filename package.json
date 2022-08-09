@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/IGardocki/sdi-blended-project1-scaffold/issues"
   },
-  "homepage": "https://github.com/IGardocki/sdi-blended-project1-scaffold#readme"
+  "homepage": "https://github.com/IGardocki/sdi-blended-project1-scaffold#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
 }
