@@ -1,0 +1,19 @@
+{
+  "name": "sdi-blended-project1-scaffold",
+  "version": "1.0.0",
+  "description": "SDI Project 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IGardocki/sdi-blended-project1-scaffold.git"
+  },
+  "author": "IGardocki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IGardocki/sdi-blended-project1-scaffold/issues"
+  },
+  "homepage": "https://github.com/IGardocki/sdi-blended-project1-scaffold#readme"
+}
