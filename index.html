@@ -8,32 +8,34 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <script src="scripts/main.js"></script>
+  <!-- <script src="scripts/main.js"></script> -->
   
-  <h1> Card Game </h1>
+  <h1> Coding Practice</h1>
+
+  <div id ="cardimg2" >
+    <img id ="card-img" src="pictures/Car Back.jpeg" alt="card2" height = "500" width="300">
+  </div>
   
   <div id="game-container">
     <div id="game-board">
       <div id="player-1-card-1" class="card"></div>
       <div id="player-1-card-2" class="card"></div>
+      <!-- <img id="card-img" > -->
     
     </div>
     <div id="game-controls">
-      <button id="question-button" onclick="question()">question</button>
-      <button id="shuffle-button" onclick="shuffle()">shuffle</button>
-      <button id="help-button" onclick="help()">help</button>
+      <button id="draw-button" >Draw Card</button>
+      <button id="shuffle-button" >Shuffle Deck</button>
+      <button id="help-button" >help</button>
     </div>
 
-    <div id ="cardimg2" >
-      <img src="pictures/Car Back.jpeg" alt="card2" height = "500" width="300">
-    </div>
+ <section>
+  <p id = "current-question" >
+    <!-- This is a question give it your best shot! -->
+  </p>
+ </section>
 
       
-
-
-    
-  
-  
-  
+<script src = "/scripts/main.js"></script>
 </body>
 </html>

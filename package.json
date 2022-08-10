@@ -4,7 +4,8 @@
   "description": "SDI Project 1",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "live-server ."
   },
   "repository": {
     "type": "git",

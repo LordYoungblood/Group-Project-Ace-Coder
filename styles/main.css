@@ -2,30 +2,51 @@ body {
   background-color: #59CE8F;
 }
 
-#question-button{
+h1{
+  padding-top: 100px;
+  width: 10%;
+  margin: 0 auto 0 auto;
+}
+
+#cardimg2{
+  padding-top: 30px;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  }
+
+#game-container{
+  display: inline;
+  position: relative;
+  top: 700px;
+  left: 43%;
+} 
+
+
+
+
+  /* #draw-button{
   background-color: #59CE8F;
   color: #fff;
-  position: relative;
-  left: 50%; 
-}
+  position: absolute;
+  left: 500px;
+  top: 725px;
+  width: 100px;
+};
 
 #shuffle-button{
   background-color: #59CE8F;
   color: #fff;
-  position: relative;
-  left: 50%;
-};
+  position: absolute;
+  left: 700px;
+  top: 725px;
+  width: 100px;
+}; */
 
-#help-button{
-  background-color: #59CE8F;
-  color: #fff;
-  position: relative;
-  left: 50%;
-}
-
-#cardimg2{
-  position: relative;
-  left: 500px;
-  margin-top: 300px;  
-  
-}
+/* For the text 
+ .center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+} */
