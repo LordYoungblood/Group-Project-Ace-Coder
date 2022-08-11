@@ -8,16 +8,18 @@ const checkCorrect = (button, rightAnswer, hint, multiplier) => {
         totalScore += multiplier;
         console.log(totalScore)
         score.innerHTML = totalScore;
-        $('.alert').alert();
+        alert.show('Nice');
         return true;
     } else {
         // console.log('worng');
         // button.style.backgroundColor = "red";
         button.innerHTML = hint;
+        alert("not exactly")
         return false;
     }
 }
 
+let cardString ='2H, 3H, 4H';
 let totalScore = 0;
 let score = document.getElementById('score-container');
 
@@ -83,40 +85,40 @@ let questionDict = {
             "correctAnswer": "a",
             "hint": "Remember, functions are executed in the order called - not in the order defined."
         },
-    //     "2D":{
-    //         "question": "Given the following code, what is the expected output from myDisplayer()?<pre><code>function myFirst() {\n  myDisplayer("Hello");\n}\nfunction mySecond() {\n
-    //   myDisplayer("Goodbye");\n}\n\nmySecond();\nmyFirst();",
-    //         "answers": {
-    //             a: "Goodbye",
-    //             b: "Hello",
-    //             c: "",
-    //             d: "undefined"
-    //         }
-    //         "correctAnswer": "b",
-    //         "hint": "Remember, functions are executed in the order called - not in the order defined."
-    //     },
-    //     "KD" : {
-    //         "question": "Given the following code, what would be a more efficient way to provide input #'s and display the result?'<pre><code>function myDisplayer(some) {\n  document.getElementById("demo").innerHTML = some;\n}\nfunction myCalculator(num1, num2) {\n  let sum = num1 + num2;\n  return sum;\n}\nlet result = myCalculator(5, 5);\nmyDisplayer(result);</code></pre>",
-    //         "answers": {
-    //             a: "Adding a function call in the first line of myCalculator(), myDisplayer(result)",
-    //             b:"Adding a function call in the first line of myCalculator(), myDisplayer(result)",
-    //             c:"Adding a function call in the last line of myCalculator(), myDisplayer(sum)",
-    //             d:"Nothing, it's perfect the way it is!"
-    //         }
-    //         "correctAnswer": "c",
-    //         "hint": "Remember, calling functions within functions can eliminate some complexity in your code."
-    //     },
-    //     "AC" : {
-    //         "question": "What is the indicator to allow use of parent methods within a child class?"
-    //         "answers": {
-    //             a: "super",
-    //             b:"subclass",
-    //             c:"get",
-    //             d:"extends"
-    //         }
-    //         "correctAnswer": "a",
-    //         "hint": "think about how inheritance is used to define a child class from a parent class"
-    //     },
+        "2D":{
+            "question": `Given the following code, what is the expected output from myDisplayer()?<pre><code>function myFirst() {\n  myDisplayer("Hello");\n}\nfunction mySecond() {\n
+      myDisplayer("Goodbye");\n}\n\nmySecond();\nmyFirst();`,
+            "answers": {
+                a: "Goodbye",
+                b: "Hello",
+                c: "",
+                d: "undefined"
+            },
+            "correctAnswer": "b",
+            "hint": "Remember, functions are executed in the order called - not in the order defined."
+        },
+        "KD" : {
+            "question": `Given the following code, what would be a more efficient way to provide input #'s and display the result?'<pre><code>function myDisplayer(some) {\n  document.getElementById("demo").innerHTML = some;\n}\nfunction myCalculator(num1, num2) {\n  let sum = num1 + num2;\n  return sum;\n}\nlet result = myCalculator(5, 5);\nmyDisplayer(result);</code></pre>`,
+            "answers": {
+                a: "Adding a function call in the first line of myCalculator(), myDisplayer(result)",
+                b:"Adding a function call in the first line of myCalculator(), myDisplayer(result)",
+                c:"Adding a function call in the last line of myCalculator(), myDisplayer(sum)",
+                d:"Nothing, it's perfect the way it is!"
+            },
+            "correctAnswer": "c",
+            "hint": "Remember, calling functions within functions can eliminate some complexity in your code."
+        },
+        "AC" : {
+            "question": "What is the indicator to allow use of parent methods within a child class?",
+            "answers": {
+                a: "super",
+                b:"subclass",
+                c:"get",
+                d:"extends"
+            },
+            "correctAnswer": "a",
+            "hint": "think about how inheritance is used to define a child class from a parent class"
+        },
     //     "2C" : {
     //         "question": "What is the proper syntax to define a new class?",
     //         "answers": {
@@ -193,7 +195,7 @@ shufflebtn.addEventListener('click', function () {
                     .then(data => {
                         console.log(data.cards[0].code);
                         // console.log(data.cards[0].image);
-                        // console.log(data.cards[0].value);
+                        console.log(data.cards[0].suit);
                         // console.log('score muit:',scoreMultiplierDict[data.cards[0].value]);
                         let cardCode = data.cards[0].code;
                         let imagelink = data.cards[0].image;
@@ -238,6 +240,23 @@ shufflebtn.addEventListener('click', function () {
                                 answeredCorrectly = checkCorrect(dAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint, questionDict[cardCode].difficulty);
                             }
                         })
+                        helpbtn.addEventListener('click',function(){
+                            // window.open ("https://developer.mozilla.org/en-US/docs/Web/JavaScript", "_blank");
+                            let cardSuit = data.cards[0].suit;
+                            if (cardSuit === 'SPADES'){
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array", "_blank")
+                            }
+                            if (cardSuit === 'HEARTS'){
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions", "_blank")
+                            }
+                            if (cardSuit === 'DIAMONDS'){
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function", "_blank")
+                            }
+                            if (cardSuit === 'CLUBS'){
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes", "_blank")
+                            }
+                            
+                        })
                         //     let answers = [];
                         //    let output = []
                         //    for(let letter in questionDict[cardCode].answers){
@@ -264,9 +283,7 @@ shufflebtn.addEventListener('click', function () {
         })
 })
 
-helpbtn.addEventListener('click',function(){
-    window.location = "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-})
+
 // var myQuestions = [
 //     "AH": {
 //       question: "What is 10/2?",
