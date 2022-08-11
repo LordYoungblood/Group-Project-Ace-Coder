@@ -1,26 +1,181 @@
 body {
-  background-color: #59CE8F;
+  background-color: #576F72;
 }
 
 h1{
-  padding-top: 100px;
-  width: 10%;
-  margin: 0 auto 0 auto;
+  color: #F0EBE3;
+  font-family: 'Sacramento', cursive;
+  position: absolute;
+  left: 43%;
+  font-size : 50px;
 }
 
 #cardimg2{
-  padding-top: 30px;
+  padding-top: 2%;
   position: absolute;
-  left: 40%;
-  top: 25%;
+  left: 39%;
+  top: 15%;
   }
 
-#game-container{
+  #game-questions{
+    background-color:#E5DCC3 ;
+    position: absolute;
+    left: 62%;
+    top: 17%;
+    width: 30%;
+    font-size: 25px;
+    border-radius: 5%; 
+    border: 8px solid #AAA492;
+  }
+  
+  #current-question{
+    background-color:#E5DCC3 ;
+    position: absolute;
+    left: 62%;
+    top: 70%;
+    width: 30%;
+    font-size: 25px;
+    border-radius: 7%; 
+    border: 8px solid #AAA492;
+  }
+    
+
+#draw-button{
+  display: inline;
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  background-color: #F0EBE3;
+  color: #7D9D9C;
+  
+}
+
+#draw-button {
+  background: #7D9D9C;
+  background-image: -webkit-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -moz-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -ms-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -o-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: linear-gradient(to bottom, #7D9D9C, #E4DCCF);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#draw-button:hover {
+  background: #C7BEA2;
+  background-image: -webkit-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -moz-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -ms-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -o-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: linear-gradient(to bottom, #C7BEA2, 9A9483);
+  text-decoration: none;
+}
+
+#shuffle-button {
+  display: inline;
+  position: absolute;
+  top: 90%;
+  left: 45%;
+}
+
+#shuffle-button {
+  background: #7D9D9C;
+  background-image: -webkit-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -moz-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -ms-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -o-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: linear-gradient(to bottom, #7D9D9C, #E4DCCF);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#shuffle-button:hover {
+  background: #C7BEA2;
+  background-image: -webkit-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -moz-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -ms-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -o-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: linear-gradient(to bottom, #C7BEA2, 9A9483);
+  text-decoration: none;
+}
+
+#help-button {
+  display: inline;
+  position: absolute;
+  top: 90%;
+  left: 56%;
+}
+
+#help-button{
+  background: #7D9D9C;
+  background-image: -webkit-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -moz-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -ms-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: -o-linear-gradient(top, #7D9D9C, #E4DCCF);
+  background-image: linear-gradient(to bottom, #7D9D9C, #E4DCCF);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#help-button:hover {
+  background: #C7BEA2;
+  background-image: -webkit-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -moz-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -ms-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: -o-linear-gradient(top, #C7BEA2, 9A9483);
+  background-image: linear-gradient(to bottom, #C7BEA2, 9A9483);
+  text-decoration: none;
+}
+
+#bottom-container {
+  display: inline;
+  position: absolute;
+  top: 93%;
+  left: 80%;
+}
+
+
+/* #game-container{
+  display: inline;
+  position: absolute;
+  top: 95%;
+  left: 55%;
+}  */
+
+
+/* #game-container{
   display: inline;
   position: relative;
   top: 700px;
   left: 43%;
-} 
+}  */
 
 
 
