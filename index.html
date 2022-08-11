@@ -19,21 +19,34 @@
   
   <h1> Ace Coder </h1>
 
-
-  <nav class = "navbar bg-light">
-    <ul class = "navbar-nav">
-      <li class = ""> Spades </li>
-      <li class = ""> Hearts </li>
-      <li class = ""> Clubs </li>
-      <li class = ""> Diamonds </li>
-        
-      </li>
-
-    </ul>
-  </nav>
+  <div id = "navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> Clubs <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="#"> Diamonds <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Spades <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Hearts <span class="sr-only">(current)</span></a>
+            </li>
+      </div>
+    </nav>
+  </div>
 
   <div id="score-container">
     <p>Score</p>
+    <span></span>
   </div>
 
   <div id ="cardimg2" >
@@ -48,16 +61,16 @@
     
     </div>
     <div id="game-controls">
-      <button id="draw-button" >Draw Card</button>
+      <button id="draw-button" hidden="true" >Draw Card</button>
       <button id="shuffle-button" >Shuffle Deck</button>
       <button id="help-button" >help</button>
     </div>
 
 
-    <div id="game-questions">
-      
-      <div id="question-block">Question</div>
-      <button id="a">AAAA</button>
+    <div id="game-questions" hidden="true">
+      <!-- The deck is shuffled! Click draw card to begin! -->
+      <div id="question-block">question</div>
+      <button id="a" type= "button" class="btn btn-secondary btn-block">A</button>
       <button id="b">BBB</button>
       <button id="c">CCC</button>
       <button id="d">DDD</button>
@@ -68,6 +81,19 @@
     This is a question give it your best shot! -->
   <!-- </p>
  </section> -->
+
+
+ <!-- <div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div> -->
+
+<!-- <div class="alert alert-danger" role="alert">
+  A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+</div> -->
+
 
 
       

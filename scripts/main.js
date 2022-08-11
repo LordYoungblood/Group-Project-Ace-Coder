@@ -1,17 +1,18 @@
 'use strict';
-const checkCorrect = (button, rightAnswer, hint) => {
+const checkCorrect = (button, rightAnswer, hint, multiplier) => {
+    console.log('but id: ', button.id)
     if (button.id === rightAnswer) {
 
-        button.style.backgroundColor = "green";
+        // button.style.backgroundColor = "green";
         button.innerHTML = 'Correct! Click Draw to Move to the Next Question!'
-        totalScore += 100;
+        totalScore += multiplier;
         console.log(totalScore)
         score.innerHTML = totalScore;
-
+        $('.alert').alert();
         return true;
     } else {
-        console.log('worng');
-        button.style.backgroundColor = "red";
+        // console.log('worng');
+        // button.style.backgroundColor = "red";
         button.innerHTML = hint;
         return false;
     }
@@ -20,6 +21,7 @@ const checkCorrect = (button, rightAnswer, hint) => {
 let totalScore = 0;
 let score = document.getElementById('score-container');
 
+let helpbtn = document.getElementById('help-button')
 let shufflebtn = document.getElementById('shuffle-button')
 let drawbtn = document.getElementById('draw-button')
 let cardimage = document.getElementById('card-img')
@@ -32,6 +34,7 @@ let bAnswer = document.getElementById('b');
 let cAnswer = document.getElementById('c');
 let dAnswer = document.getElementById('d');
 
+
 let questionDict = {
     "AS": {
         "question": "Given the following array, what is the correct method of returning an array containing only values 'jeans' and 'sweatpants'?\n <pre><code>const pants = ['jeans', 'sweatpants', 'leggings', 'shorts', 'slacks']</code></pre>",
@@ -43,7 +46,7 @@ let questionDict = {
         },
         "correctAnswer": "c",
         "hint": "Think about how each array method behaves, and the parameter needed to be passed in to each method",
-        //'difficulty': 13
+        "difficulty": 11
     },
     "2S": {
         "question": "How do you create an empty array?",
@@ -55,120 +58,120 @@ let questionDict = {
         },
         "correctAnswer": "a",
         "hint": "What does an array look like?",
-        "scoreMultiplier" : 1
+        "difficulty": 2
     },
-//     "KS":{
-//         "question": "Given this code, which is the proper method to have one array containing all elements from both arrays? \n <pre><code>const Fruits = ['Banana', 'Strawberry', 'Apple', 'Oranges'] \n const Vegetables ['Tomato','Corn', 'Bell Pepper', 'Carrot']",
-//         "answers": {
-//             a: ".map",
-//             b:".concat",
-//             c:".reduce",
-//             d:".slice"
-//         }
-//         "correctAnswer": "b",
-//         "hint": "Think about how each method handles the array, and what the return of each method looks like"
-//         //"difficulty" : 12
-//     },
-//     "AD":{
-//         "question": "question": "What is the equivalent Async syntax for the following Promise statement:\n<pre><code>  function myFunction() {/n  return Promise.resolve("Hello");/n}",
-//         "answers": {
-//             a: "<pre><code>async function myFunction() {\n return "Hello";\n</code></pre>}",
-//             b: "<pre><code>function async myFunction() {\n return "Hello";\n</code></pre>}",
-//             c: "<pre><code>async function myFunction().then( {\n return "Hello";\n);</code></pre>}",
-//             d: "<pre><code>function async myFunction().then ( {\n return "Hello";\n);</code></pre>}"
-//         }
-//         "correctAnswer": "a",
-//         "hint": "Remember, functions are executed in the order called - not in the order defined."
-//     },
-//     "2D":{
-//         "question": "Given the following code, what is the expected output from myDisplayer()?<pre><code>function myFirst() {\n  myDisplayer("Hello");\n}\nfunction mySecond() {\n
-//   myDisplayer("Goodbye");\n}\n\nmySecond();\nmyFirst();",
-//         "answers": {
-//             a: "Goodbye",
-//             b: "Hello",
-//             c: "",
-//             d: "undefined"
-//         }
-//         "correctAnswer": "b",
-//         "hint": "Remember, functions are executed in the order called - not in the order defined."
-//     },
-//     "KD" : {
-//         "question": "Given the following code, what would be a more efficient way to provide input #'s and display the result?'<pre><code>function myDisplayer(some) {\n  document.getElementById("demo").innerHTML = some;\n}\nfunction myCalculator(num1, num2) {\n  let sum = num1 + num2;\n  return sum;\n}\nlet result = myCalculator(5, 5);\nmyDisplayer(result);</code></pre>",
-//         "answers": {
-//             a: "Adding a function call in the first line of myCalculator(), myDisplayer(result)",
-//             b:"Adding a function call in the first line of myCalculator(), myDisplayer(result)",
-//             c:"Adding a function call in the last line of myCalculator(), myDisplayer(sum)",
-//             d:"Nothing, it's perfect the way it is!"
-//         }
-//         "correctAnswer": "c",
-//         "hint": "Remember, calling functions within functions can eliminate some complexity in your code."
-//     },
-//     "AC" : {
-//         "question": "What is the indicator to allow use of parent methods within a child class?"
-//         "answers": {
-//             a: "super",
-//             b:"subclass",
-//             c:"get",
-//             d:"extends"
-//         }
-//         "correctAnswer": "a",
-//         "hint": "think about how inheritance is used to define a child class from a parent class"
-//     },
-//     "2C" : {
-//         "question": "What is the proper syntax to define a new class?",
-//         "answers": {
-//             a: "class = ClassName { \n constructor() {...} \n }",
-//             b:"class ClassName { \n constructor() {...} \n }",
-//             c:"class ClassName = { \n constructor() {...} \n }",
-//             d:"class ClassName { \n constructor = () {...} \n }"
-//         }
-//         "correctAnswer": "b",
-//         "hint": "look carefully at how a class is defined and what is necessary to define the class"
-//     },
-//     "KC" : {
-//         "question": "If a class contains a private property, what are the two method types that will allow for those private properties to be accessed?",
-//         "answers": {
-//             a: "get, set",
-//             b:"super, subclass",
-//             c:"extends, super",
-//             d:"get, extends"
-//         }
-//         "correctAnswer": "a",
-//         "hint": "remember that private properties can only be accessed within a parent class"
-//     },
-        // "AH" : {
-        //     "question" : ""
-        //     "answers" : {
-        //         a: "",
-        //         b: "",
-        //         c: "",
-        //         d: ""
-        //     }
-        //     "correctAnswer" :"",
-        //     "hint": ""
-        // }
-        // "2H" : {
-        //     "question" : "What is the proper way to declare a function?"
-        //     "answers" : {
-        //         a: "function name = name (){...}",
-        //         b: "function name {...}",
-        //         c: "function name() = {...}",
-        //         d: "function name () {...}"
-        //     }
-        //     "correctAnswer" :"d",
-        //     "hint": "think about what elements constitute a function and how it is called"
-        // }
-        // "KH" : {
-        //     "question" : "Given the following code, what variables can be used within the function?"
-        //     "answers" : {
-        //         a: "",
-        //         b: "",
-        //         c: "",
-        //         d: ""
-        //     }
-        //     "correctAnswer" :"",
-        //     "hint": ""
-        // }
+    "KS": {
+        "question": "Given this code, which is the proper method to have one array containing all elements from both arrays? \n <pre><code>const Fruits = ['Banana', 'Strawberry', 'Apple', 'Oranges'] \n const Vegetables ['Tomato','Corn', 'Bell Pepper', 'Carrot']",
+        "answers": {
+            a: ".map",
+            b: ".concat",
+            c: ".reduce",
+            d: ".slice"
+        },
+        "correctAnswer": "b",
+        "hint": "Think about how each method handles the array, and what the return of each method looks like",
+        "difficulty": 12
+    },
+        "AD":{
+            "question": `What is the equivalent Async syntax for the following Promise statement:\n<pre><code>  function myFunction() {/n  return Promise.resolve("Hello");/n}`,
+            "answers": {
+                a: `<pre><code>async function myFunction() {\n return "Hello";\n</code></pre>}`,
+                b: `<pre><code>function async myFunction() {\n return "Hello";\n</code></pre>}`,
+                c: `<pre><code>async function myFunction().then( {\n return "Hello";\n);</code></pre>}`,
+                d: `<pre><code>function async myFunction().then ( {\n return "Hello";\n);</code></pre>}`
+            },
+            "correctAnswer": "a",
+            "hint": "Remember, functions are executed in the order called - not in the order defined."
+        },
+    //     "2D":{
+    //         "question": "Given the following code, what is the expected output from myDisplayer()?<pre><code>function myFirst() {\n  myDisplayer("Hello");\n}\nfunction mySecond() {\n
+    //   myDisplayer("Goodbye");\n}\n\nmySecond();\nmyFirst();",
+    //         "answers": {
+    //             a: "Goodbye",
+    //             b: "Hello",
+    //             c: "",
+    //             d: "undefined"
+    //         }
+    //         "correctAnswer": "b",
+    //         "hint": "Remember, functions are executed in the order called - not in the order defined."
+    //     },
+    //     "KD" : {
+    //         "question": "Given the following code, what would be a more efficient way to provide input #'s and display the result?'<pre><code>function myDisplayer(some) {\n  document.getElementById("demo").innerHTML = some;\n}\nfunction myCalculator(num1, num2) {\n  let sum = num1 + num2;\n  return sum;\n}\nlet result = myCalculator(5, 5);\nmyDisplayer(result);</code></pre>",
+    //         "answers": {
+    //             a: "Adding a function call in the first line of myCalculator(), myDisplayer(result)",
+    //             b:"Adding a function call in the first line of myCalculator(), myDisplayer(result)",
+    //             c:"Adding a function call in the last line of myCalculator(), myDisplayer(sum)",
+    //             d:"Nothing, it's perfect the way it is!"
+    //         }
+    //         "correctAnswer": "c",
+    //         "hint": "Remember, calling functions within functions can eliminate some complexity in your code."
+    //     },
+    //     "AC" : {
+    //         "question": "What is the indicator to allow use of parent methods within a child class?"
+    //         "answers": {
+    //             a: "super",
+    //             b:"subclass",
+    //             c:"get",
+    //             d:"extends"
+    //         }
+    //         "correctAnswer": "a",
+    //         "hint": "think about how inheritance is used to define a child class from a parent class"
+    //     },
+    //     "2C" : {
+    //         "question": "What is the proper syntax to define a new class?",
+    //         "answers": {
+    //             a: "class = ClassName { \n constructor() {...} \n }",
+    //             b:"class ClassName { \n constructor() {...} \n }",
+    //             c:"class ClassName = { \n constructor() {...} \n }",
+    //             d:"class ClassName { \n constructor = () {...} \n }"
+    //         }
+    //         "correctAnswer": "b",
+    //         "hint": "look carefully at how a class is defined and what is necessary to define the class"
+    //     },
+    //     "KC" : {
+    //         "question": "If a class contains a private property, what are the two method types that will allow for those private properties to be accessed?",
+    //         "answers": {
+    //             a: "get, set",
+    //             b:"super, subclass",
+    //             c:"extends, super",
+    //             d:"get, extends"
+    //         }
+    //         "correctAnswer": "a",
+    //         "hint": "remember that private properties can only be accessed within a parent class"
+    //     },
+    // "AH" : {
+    //     "question" : "Which of the following higher order functions does not return a new array?"
+    //     "answers" : {
+    //         a: ".map",
+    //         b: ".forEach",
+    //         c: ".reduce",
+    //         d: ".filter"
+    //     }
+    //     "correctAnswer" :"b",
+    //     "hint": "what are the behaviors of each higher order function"
+    // }
+    // "2H" : {
+    //     "question" : "What is the proper way to declare a function?"
+    //     "answers" : {
+    //         a: "function name = name (){...}",
+    //         b: "function name {...}",
+    //         c: "function name() = {...}",
+    //         d: "function name () {...}"
+    //     }
+    //     "correctAnswer" :"d",
+    //     "hint": "think about what elements constitute a function and how it is called"
+    // }
+    // "KH" : {
+    //     "question" : Given the following function, what do you expect to be logged to the console? \n function uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase("the quick brown fox"));"
+    //     "answers" : {
+    //         a: "The quick brown fox",
+    //         b: "THE QUICK BROWN FOX",
+    //         c: "The Quick Brown Fox",
+    //         d: "the quick brown fox"
+    //     }
+    //     "correctAnswer" :"c",
+    //     "hint": "look at the element and index being called from the array, how do the .uppercase and .slice methods behave?"
+    // }
 
 };
 
@@ -181,62 +184,58 @@ shufflebtn.addEventListener('click', function () {
         .then(response => response.json())
         .then(data => data.deck_id)
         .then(deck_ID => {
+            document.getElementById("game-questions").hidden = false;
+            drawbtn.hidden = false;
+            shufflebtn.hidden = true;
             drawbtn.addEventListener('click', function () {
                 fetch(`http://deckofcardsapi.com/api/deck/${deck_ID}/draw/?count=1`)
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data.cards[0].code)
-                        console.log(data.cards[0].image)
+                        console.log(data.cards[0].code);
+                        // console.log(data.cards[0].image);
+                        // console.log(data.cards[0].value);
+                        // console.log('score muit:',scoreMultiplierDict[data.cards[0].value]);
+                        let cardCode = data.cards[0].code;
+                        let imagelink = data.cards[0].image;
 
-                        let cardCode = data.cards[0].code
+                        // var scoreMultiplier = scoreMultiplierDict[data.cards[0].difficulty];
+                        // console.log(scoreMultiplier)
 
-                        let imagelink = data.cards[0].image
                         cardimage.src = imagelink
 
                         let question = questionDict[cardCode].question;
-
+                        // let scoreMultiplier = questionDict[cardCode].difficulty;
+                        console.log('questionDict[cardCode].difficulty', questionDict[cardCode].difficulty)
                         console.log(question);
                         questionBlock.innerHTML = question;
                         aAnswer.innerHTML = questionDict[cardCode].answers.a;
                         bAnswer.innerHTML = questionDict[cardCode].answers.b;
                         cAnswer.innerHTML = questionDict[cardCode].answers.c;
                         dAnswer.innerHTML = questionDict[cardCode].answers.d;
-                        console.log(questionDict[cardCode].correctAnswer);
-                        console.log('answerid:', aAnswer.id);
+                        // console.log(questionDict[cardCode].correctAnswer);
+                        console.log('answerid a:', aAnswer.id);
+                        console.log('answerid b:', bAnswer.id);
                         var answeredCorrectly = false;
                         aAnswer.addEventListener('click', function () {
                             if (!answeredCorrectly) {
-                                answeredCorrectly = checkCorrect(aAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint);
+                                answeredCorrectly = checkCorrect(aAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint, questionDict[cardCode].difficulty);
                             }
                             console.log(answeredCorrectly);
 
-                            // if(questionDict[cardCode].correctAnswer === 'a'){
-                            //     console.log('yes')
-                            //     aAnswer.style.backgroundColor = "green";
-                            //     aAnswer.innerHTML='Correct! Click Draw to Move to the Next Question!'
-                            //     totalScore += 100;
-                            //     console.log(totalScore)
-
-                            // }
-                            // else{
-                            //     console.log('worng');
-                            //     aAnswer.style.backgroundColor = "red";
-                            //     aAnswer.innerHTML= questionDict[cardCode].hint;
-                            // }
                         })
                         bAnswer.addEventListener('click', function () {
                             if (!answeredCorrectly) {
-                                answeredCorrectly = checkCorrect(bAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint);
+                                answeredCorrectly = checkCorrect(bAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint, questionDict[cardCode].difficulty);
                             }
                         })
                         cAnswer.addEventListener('click', function () {
                             if (!answeredCorrectly) {
-                                answeredCorrectly = checkCorrect(cAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint);
+                                answeredCorrectly = checkCorrect(cAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint, questionDict[cardCode].difficulty);
                             }
                         })
                         dAnswer.addEventListener('click', function () {
                             if (!answeredCorrectly) {
-                                answeredCorrectly = checkCorrect(dAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint);
+                                answeredCorrectly = checkCorrect(dAnswer, questionDict[cardCode].correctAnswer, questionDict[cardCode].hint, questionDict[cardCode].difficulty);
                             }
                         })
                         //     let answers = [];
@@ -265,7 +264,9 @@ shufflebtn.addEventListener('click', function () {
         })
 })
 
-
+helpbtn.addEventListener('click',function(){
+    window.location = "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+})
 // var myQuestions = [
 //     "AH": {
 //       question: "What is 10/2?",

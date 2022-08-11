@@ -2,19 +2,21 @@ body {
   background-color: #576F72;
   height: auto;
   width: auto;
+  text-align: center;
 }
 
 h1{
   color: #F0EBE3;
   font-family: 'Sacramento', cursive;
   position: absolute;
-  left: 35%;
+  left: 43%;
   font-size : 50px;
   top: 10%;
 }
 
 #score-container{
   position: absolute;
+  text-align: center;
   height: 10%;
   width: 20%;
   top: 20%;
@@ -25,21 +27,22 @@ h1{
   /* height: max-content; */
   font-size: 2em;
   border-radius: 5%; 
-  border: 20px solid #AAA492;
+  border: 5% solid #AAA492;
 }
 
 #card-img{
   padding-top: 2%;
   position: absolute;
-  left: 43%;
+  left: 40%;
   top: 17%;
   max-height: 50%;  
   }
 
   #game-questions{
+
     background-color:#E5DCC3 ;
     position: absolute;
-    left: 60%;
+    left: 65%;
     top: 20%;
     width: 30%;
     height: max-content;
@@ -52,15 +55,11 @@ h1{
   display: inline;
   position: absolute;
   top: 70%;
-  left: 27%;
+  left: 45%;
 
 }
 
-#draw-button{
-  /* display: inline;
-  position: absolute;
-  top: 90%;
-  left: 33%; */
+/* #draw-button{
   background-color: #F0EBE3;
   color: #7D9D9C;
   
@@ -97,10 +96,6 @@ h1{
 }
 
 #shuffle-button {
-  /* display: inline;
-  position: absolute;
-  top: 90%;
-  left: 45%; */
 }
 
 #shuffle-button {
@@ -134,10 +129,6 @@ h1{
 }
 
 #help-button {
-  /* display: inline;
-  position: absolute;
-  top: 90%;
-  left: 58%; */
 }
 
 #help-button{
@@ -168,7 +159,7 @@ h1{
   background-image: -o-linear-gradient(top, #C7BEA2, 9A9483);
   background-image: linear-gradient(to bottom, #C7BEA2, 9A9483);
   text-decoration: none;
-}
+} */
 
 #bottom-container {
   display: inline;
@@ -177,7 +168,7 @@ h1{
   left: 80%;
 }
 
-#a{
+/* #a{
   background: #7D9D9C;
   background-image: -webkit-linear-gradient(top, #7D9D9C, #E4DCCF);
   background-image: -moz-linear-gradient(top, #7D9D9C, #E4DCCF);
@@ -206,7 +197,7 @@ h1{
   background-image: -o-linear-gradient(top, #C7BEA2, 9A9483);
   background-image: linear-gradient(to bottom, #C7BEA2, 9A9483);
   text-decoration: none;
-}
+} */
 
 
 #b{
