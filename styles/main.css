@@ -3,6 +3,7 @@ body {
   height: auto;
   width: auto;
   text-align: center;
+  /* align-items: center; */
 }
 
 h1{
@@ -59,6 +60,14 @@ h1{
   left: 34%;
   width: 20%;
 
+}
+
+
+#bottom-container {
+  display: inline;
+  position: absolute;
+  top: 93%;
+  left: 80%;
 }
 
 /* #draw-button{
@@ -163,12 +172,6 @@ h1{
   text-decoration: none;
 } */
 
-#bottom-container {
-  display: inline;
-  position: absolute;
-  top: 93%;
-  left: 80%;
-}
 
 /* #a{
   background: #7D9D9C;

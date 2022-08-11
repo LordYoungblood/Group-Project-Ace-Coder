@@ -343,72 +343,73 @@ shufflebtn.addEventListener('click', function () {
 //         })
 // })
 
-// mathBtn.addEventListener('click', function () {
-//     fetch("http://deckofcardsapi.com/api/deck/new/shuffle/?cards=AC,2C,KC)
-//         .then(response => response.json())
-//         .then(data => data.deck_id)
-//         .then(deck_ID => {
+mathBtn.addEventListener('click', function () {
+    fetch("http://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH")
+        .then(response => response.json())
+        .then(data => data.deck_id)
+        .then(deck_ID => {
 
-//             drawbtn.hidden = false;
-//             shufflebtn.hidden = true;
-//             drawbtn.addEventListener('click', function () {
-//                 fetch(`http://deckofcardsapi.com/api/deck/${deck_ID}/draw/?count=1`)
-//                     .then(response => response.json())
-//                     .then(data => {
-//                         document.getElementById("game-questions").hidden = false;
-//                         let cardCode = data.cards[0].code;
-//                         let imagelink = data.cards[0].image;
+            drawbtn.hidden = false;
+            shufflebtn.hidden = true;
+            mathBtn.hidden = true;
+            drawbtn.addEventListener('click', function () {
+                fetch(`http://deckofcardsapi.com/api/deck/${deck_ID}/draw/?count=1`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("game-questions").hidden = false;
+                        let cardCode = data.cards[0].code;
+                        let imagelink = data.cards[0].image;
 
-//                         cardimage.src = imagelink
+                        cardimage.src = imagelink
 
-//                         let question = questionDict[cardCode].question;
+                        let question = mathQuestionDict[cardCode].question;
 
-//                         questionBlock.innerHTML = question;
-//                         aAnswer.innerHTML = mathQuestionDict[cardCode].answers.a;
-//                         bAnswer.innerHTML = mathQuestionDict[cardCode].answers.b;
-//                         cAnswer.innerHTML = mathQuestionDict[cardCode].answers.c;
-//                         dAnswer.innerHTML = mathQuestionDict[cardCode].answers.d;
+                        questionBlock.innerHTML = question;
+                        aAnswer.innerHTML = mathQuestionDict[cardCode].answers.a;
+                        bAnswer.innerHTML = mathQuestionDict[cardCode].answers.b;
+                        cAnswer.innerHTML = mathQuestionDict[cardCode].answers.c;
+                        dAnswer.innerHTML = mathQuestionDict[cardCode].answers.d;
   
-//                         var answeredCorrectly = false;
-//                         aAnswer.addEventListener('click', function () {
-//                             if (!answeredCorrectly) {
-//                                 answeredCorrectly = checkCorrect(aAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
-//                             }
+                        var answeredCorrectly = false;
+                        aAnswer.addEventListener('click', function () {
+                            if (!answeredCorrectly) {
+                                answeredCorrectly = checkCorrect(aAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
+                            }
 
-//                         })
-//                         bAnswer.addEventListener('click', function () {
-//                             if (!answeredCorrectly) {
-//                                 answeredCorrectly = checkCorrect(bAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
-//                             }
-//                         })
-//                         cAnswer.addEventListener('click', function () {
-//                             if (!answeredCorrectly) {
-//                                 answeredCorrectly = checkCorrect(cAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
-//                             }
-//                         })
-//                         dAnswer.addEventListener('click', function () {
-//                             if (!answeredCorrectly) {
-//                                 answeredCorrectly = checkCorrect(dAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
-//                             }
-//                         })
-//                         helpbtn.addEventListener('click', function () {
-//                             // window.open ("https://developer.mozilla.org/en-US/docs/Web/JavaScript", "_blank");
-//                             let cardSuit = data.cards[0].suit;
-//                             if (cardSuit === 'SPADES') {
-//                                 window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array", "_blank")
-//                             }
-//                             if (cardSuit === 'HEARTS') {
-//                                 window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions", "_blank")
-//                             }
-//                             if (cardSuit === 'DIAMONDS') {
-//                                 window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function", "_blank")
-//                             }
-//                             if (cardSuit === 'CLUBS') {
-//                                 window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes", "_blank")
-//                             }
+                        })
+                        bAnswer.addEventListener('click', function () {
+                            if (!answeredCorrectly) {
+                                answeredCorrectly = checkCorrect(bAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
+                            }
+                        })
+                        cAnswer.addEventListener('click', function () {
+                            if (!answeredCorrectly) {
+                                answeredCorrectly = checkCorrect(cAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
+                            }
+                        })
+                        dAnswer.addEventListener('click', function () {
+                            if (!answeredCorrectly) {
+                                answeredCorrectly = checkCorrect(dAnswer, mathQuestionDict[cardCode].correctAnswer, mathQuestionDict[cardCode].hint, mathQuestionDict[cardCode].difficulty);
+                            }
+                        })
+                        helpbtn.addEventListener('click', function () {
+                            // window.open ("https://developer.mozilla.org/en-US/docs/Web/JavaScript", "_blank");
+                            let cardSuit = data.cards[0].suit;
+                            if (cardSuit === 'SPADES') {
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array", "_blank")
+                            }
+                            if (cardSuit === 'HEARTS') {
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions", "_blank")
+                            }
+                            if (cardSuit === 'DIAMONDS') {
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function", "_blank")
+                            }
+                            if (cardSuit === 'CLUBS') {
+                                window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes", "_blank")
+                            }
 
-//                         })
-//                     });
-//             })
-//         })
-// })
+                        })
+                    });
+            })
+        })
+})
