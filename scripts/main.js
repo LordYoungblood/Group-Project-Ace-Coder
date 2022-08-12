@@ -158,7 +158,7 @@ buttonSetup(classesButton, 'AC,2C,KC', codeQuestionDict);
 
 buttonSetup(functionsButton, 'AD,2D,KD', codeQuestionDict);
 
-buttonSetup(hofButton, 'AH,2H,KH');
+buttonSetup(hofButton, 'AH,2H,KH', codeQuestionDict);
 
 buttonSetup(mathBtn, 'AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH', mathQuestionDict);
 

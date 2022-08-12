@@ -110,7 +110,7 @@ let mathQuestionDict = {
     "AH": {
         "question": "What is sin^2(x) + cos^2(x) equal to?",
         "answers": {
-            a: "2p",
+            a: "2",
             b: "1/2",
             c: "1",
             d: "undefined"
