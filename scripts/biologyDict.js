@@ -1,14 +1,14 @@
 let biologyQuestionDict = {
     "AS": {
-        "question": "Given the following array, what is the correct method of returning an array containing only values 'jeans' and 'sweatpants'?\n <pre><code>const pants = ['jeans', 'sweatpants', 'leggings', 'shorts', 'slacks']</code></pre>",
+        "question": "How many bits of information does a nucleotide contain?",
         "answers": {
-            a: "<pre><code>const newPants = pants.map(1,2)</code></pre>",
-            b: "<pre><code>const newPants = pants.slice(0,1)</code></pre>",
-            c: "<pre><code>const newPants = pants.slice(0,2)</code></pre>",
-            d: "<pre><code>const newPants = pants.reduce(1)</code></pre>"
+            a: "4",
+            b: "2",
+            c: "8",
+            d: "1"
         },
-        "correctAnswer": "c",
-        "hint": "Think about how each array method behaves, and the parameter needed to be passed in to each method",
+        "correctAnswer": "b",
+        "hint": "How many different nucleotides are there?",
         "difficulty": 12
     },
     "2S": {
