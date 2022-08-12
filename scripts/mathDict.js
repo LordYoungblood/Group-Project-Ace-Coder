@@ -24,123 +24,123 @@ let mathQuestionDict = {
         "difficulty": 2
     },
     "KS": {
-        "question": "Given this code, which is the proper method to have one array containing all elements from both arrays? \n <pre><code>const Fruits = ['Banana', 'Strawberry', 'Apple', 'Oranges'] \n const Vegetables ['Tomato','Corn', 'Bell Pepper', 'Carrot']",
+        "question": "Fully distribute the following: 3x(x-7)(x+3)",
         "answers": {
-            a: ".map",
-            b: ".concat",
-            c: ".reduce",
-            d: ".slice"
+            a: "3x(x^2-4x-21)",
+            b: "6x^2-12x-63",
+            c: "3x^3-12x^2-63x",
+            d: "Cannot be distributed"
         },
-        "correctAnswer": "b",
-        "hint": "Think about how each method handles the array, and what the return of each method looks like",
+        "correctAnswer": "c",
+        "hint": "Remember that all elements need to be multiplied to be considered fully distributed",
         "difficulty": 11
     },
     "AD": {
-        "question": "What is the equivalent Async syntax for the following Promise statement:\n<pre><code>function myFunction() {\n  return Promise.resolve('Hello');\n}</code></pre>",
+        "question": "What is the name of a twenty sided polygon?",
         "answers": {
-            a: `<pre><code>async function myFunction() {\n return "Hello";\n}</code></pre>`,
-            b: `<pre><code>function async myFunction() {\n return "Hello";\n}</code></pre>`,
-            c: `<pre><code>async function myFunction().then( {\n return "Hello";\n);}</code></pre>`,
-            d: `<pre><code>function async myFunction().then ( {\n return "Hello";\n);}</code></pre>`
+            a: "dodecagon",
+            b: "enneagon",
+            c: "icosagon",
+            d: "enneadecagon"
         },
-        "correctAnswer": "a",
-        "hint": "Remember, functions are executed in the order called - not in the order defined.",
+        "correctAnswer": "c",
+        "hint": "Remember the prefix and suffix can help to define what polygon is being named",
         "difficulty": 12
     },
     "2D": {
-        "question": `Given the following code, what is the expected output from myDisplayer( )?<pre><code>function myFirst() {\nmyDisplayer("Hello");\n}\nfunction mySecond() {\nmyDisplayer("Goodbye");\n}\n\nmySecond();\nmyFirst();`,
+        "question": "What is the total degrees of all angles of a square?",
         "answers": {
-            a: "Goodbye",
-            b: "Hello",
-            c: "__________",
-            d: "undefined"
+            a: "90",
+            b: "180",
+            c: "270",
+            d: "360"
         },
-        "correctAnswer": "b",
-        "hint": "Remember, functions are executed in the order called - not in the order defined.",
+        "correctAnswer": "d",
+        "hint": "Remember each angle of a square is 90 degrees",
         "difficulty": 2
     },
     "KD": {
-        "question": `Given the following code, what would be a more efficient way to provide input #'s and display the result?'<pre><code>function myDisplayer(some) {\n  document.getElementById("demo").innerHTML = some;\n}\nfunction myCalculator(num1, num2) {\n  let sum = num1 + num2;\n  return sum;\n}\nlet result = myCalculator(5, 5);\nmyDisplayer(result);</code></pre>`,
+        "question": "What is the total area of a pentagon that has a length of 5 for all sides",
         "answers": {
-            a: "Adding a function call in the first line of <pre><code>myCalculator(), myDisplayer(result)</code></pre>",
-            b: "Adding a function call in the first line of <pre><code>myCalculator(), myDisplayer(result)</code></pre>",
-            c: "Adding a function call in the last line of <pre><code>myCalculator(), myDisplayer(sum)</code></pre>",
-            d: "Nothing, it's perfect the way it is!"
+            a: "25",
+            b: "50",
+            c: "43",
+            d: "38"
         },
         "correctAnswer": "c",
-        "hint": "Remember, calling functions within functions can eliminate some complexity in your code.",
+        "hint": "Remember the formula to find the area of a pentagon is (perimeter *apothem)/2",
         "difficulty": 11
     },
     "AC": {
-        "question": "What is the indicator to allow use of parent methods within a child class?",
+        "question": "Given the function f'(x) = 2x^3 + x, what is the area under the curve from 4 to 6 when f'(x) is integrated?",
         "answers": {
-            a: "super",
-            b: "subclass",
-            c: "get",
-            d: "extends"
+            a: "450",
+            b: "710",
+            c: "530",
+            d: "800"
         },
-        "correctAnswer": "a",
-        "hint": "think about how inheritance is used to define a child class from a parent class",
+        "correctAnswer": "c",
+        "hint": "Remember to find the area of a curve for a certain range, to subtract f(a) from f(b)",
         "difficulty": 12
     },
     "2C": {
-        "question": "What is the proper syntax to define a new class?",
+        "question": "What is the derivative of f(x) = x^2?",
         "answers": {
-            a: "<pre><code>class = ClassName { \n constructor() {...} \n }</code></pre>",
-            b: "<pre><code>class ClassName { \n constructor() {...} \n }</code></pre>",
-            c: "<pre><code>class ClassName = { \n constructor() {...} \n }</code></pre>",
-            d: "<pre><code>class ClassName { \n constructor = () {...} \n }</code></pre>"
+            a: "x/2",
+            b: "2x",
+            c: "x + 2",
+            d: "x - 2"
         },
         "correctAnswer": "b",
-        "hint": "look carefully at how a class is defined and what is necessary to define the class",
+        "hint": "Remember the exponent is multiplied by the coefficient when taking a derivative",
         "difficulty": 2
     },
     "KC": {
-        "question": "If a class contains a private property, what are the two method types that will allow for those private properties to be accessed?",
+        "question": "Given a position function, what does the second derivative represent?",
         "answers": {
-            a: "get, set",
-            b: "super, subclass",
-            c: "extends, super",
-            d: "get, extends"
+            a: "velocity",
+            b: "absolute speed",
+            c: "acceleration",
+            d: "nothing"
         },
-        "correctAnswer": "a",
-        "hint": "remember that private properties can only be accessed within a parent class",
+        "correctAnswer": "c",
+        "hint": "Remember that the first and second derivative of a position function carry special meaning",
         "difficulty": 11
     },
     "AH": {
-        "question": "Which of the following higher order functions does not return a new array?",
+        "question": "What is sin^2(x) + cos^2(x) equal to?",
         "answers": {
-            a: ".map",
-            b: ".forEach",
-            c: ".reduce",
-            d: ".filter"
+            a: "2p",
+            b: "1/2",
+            c: "1",
+            d: "undefined"
         },
         "correctAnswer": "b",
         "hint": "what are the behaviors of each higher order function",
         "difficulty": 12
     },
     "2H": {
-        "question": "What is the proper way to declare a function?",
+        "question": "What is the name of a triangle containing a 90 degree angle? ",
         "answers": {
-            a: "<pre><code>function name = name (){...}</code></pre>",
-            b: "<pre><code>function name {...}</code></pre>",
-            c: "<pre><code>function name() = {...}</code></pre>",
-            d: "<pre><code>function name () {...}</code></pre>"
+            a: "right triangle",
+            b: "isosceles triangle",
+            c: "proper triangle",
+            d: "absolute triangle"
         },
-        "correctAnswer": "d",
-        "hint": "think about what elements constitute a function and how it is called",
+        "correctAnswer": "a",
+        "hint": "what is a 90 degree angle often referred to?",
         "difficulty": 2
     },
     "KH": {
-        "question": "Given the following function, what do you expect to be logged to the console? \n<pre><code>function uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase('the quick brown fox'));</code></pre>",
+        "question": "Considering trigonometric identities, what is tan(x) the equivalent of?",
         "answers": {
-            a: "The quick brown fox",
-            b: "THE QUICK BROWN FOX",
-            c: "The Quick Brown Fox",
-            d: "the quick brown fox"
+            a: "sin(x)/cos(x)",
+            b: "sec(x)/csc(x)",
+            c: "cos(x)/sin(x)",
+            d: "csc(x)/sec(x)"
         },
-        "correctAnswer": "c",
-        "hint": "look at the element and index being called from the array, how do the .uppercase and .slice methods behave?",
+        "correctAnswer": "a",
+        "hint": "How do the basic trigonometric functions behave? Can you use algebra to rewrite tangent?",
         "difficulty": 11
     }
 

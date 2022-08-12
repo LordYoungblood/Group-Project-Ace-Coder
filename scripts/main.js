@@ -23,6 +23,9 @@ const checkCorrect = (button, rightAnswer, hint, multiplier) => {
     } else {
 
         // button.style.backgroundColor = "red";
+        totalScore--;
+        score.innerHTML = totalScore;
+
         let messageWrong = 'Wrong!'
         document.querySelector("#alert-container").innerHTML = `
         <div class="alert alert-danger" role="alert" data-dismiss="alert">
@@ -40,8 +43,8 @@ const hideButtons = () =>{
     classesButton.hidden = true;
     functionsButton.hidden = true;
     hofButton.hidden = true;
-    mathBtn.hidden = true;
-    bioButton.hidden = true;
+    // mathBtn.hidden = true;
+    // bioButton.hidden = true;
 }
 
 let totalScore = 0;
@@ -75,15 +78,15 @@ const buttonSetup = (button, fetchString, questionDict) => {
             .then(data => data.deck_id)
             .then(deck_ID => {
                 hideButtons();
-                // drawbtn.hidden = false;
-                // helpbtn.hidden = false;
-                // shufflebtn.hidden = true;
-                // arraysButton.hidden = true;
-                // classesButton.hidden = true;
-                // functionsButton.hidden = true;
-                // hofButton.hidden = true;
-    
-    
+                if(button === bioButton){
+                    document.body.style['background-image'] = 'url(../pictures/background.jpg)';
+                    helpbtn.hidden = true;
+                }
+                if(button === mathBtn){
+                    document.body.style['background-image'] = 'url(../pictures/background.jpg)';
+                    helpbtn.hidden = true;
+                }
+
                 drawbtn.addEventListener('click', function () {
                     fetch(`http://deckofcardsapi.com/api/deck/${deck_ID}/draw/?count=1`)
                         .then(response => response.json())
@@ -125,7 +128,7 @@ const buttonSetup = (button, fetchString, questionDict) => {
                                 }
                             })
                             helpbtn.addEventListener('click', function () {
-                                // window.open ("https://developer.mozilla.org/en-US/docs/Web/JavaScript", "_blank");
+            
                                 let cardSuit = data.cards[0].suit;
                                 if (cardSuit === 'SPADES') {
                                     window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array", "_blank")

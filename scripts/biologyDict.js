@@ -79,7 +79,7 @@ let biologyQuestionDict = {
             c: "Penn State",
             d: "UC-Berkeley"
         },
-        "correctAnswer": "a",
+        "correctAnswer": "d",
         "hint": "Check out Dr. Chris Anderson, Dr. Liana Lareau, Dr. Ian Holmes, and Dr. Adam Arkin!",
         "difficulty": 12
     },
@@ -95,33 +95,33 @@ let biologyQuestionDict = {
         "hint": "What logic can be used to construct any outcome?",
         "difficulty": 2
     },
-    ////got to here with bio questions
     "KC": {
-        "question": "If a class contains a private property, what are the two method types that will allow for those private properties to be accessed?",
+        "question": "Most life forms are carbon based! But we have recently discovered _________-based life froms as well!",
         "answers": {
-            a: "get, set",
-            b: "super, subclass",
-            c: "extends, super",
-            d: "get, extends"
+            a: "Berkelium",
+            b: "Helium",
+            c: "Hydrogen",
+            d: "Sulfur"
         },
-        "correctAnswer": "a",
-        "hint": "remember that private properties can only be accessed within a parent class",
+        "correctAnswer": "d",
+        "hint": "The deep sea is a weird place!",
         "difficulty": 11
     },
+ 
     "AH": {
-        "question": "Which of the following higher order functions does not return a new array?",
+        "question": "Where was the element with atomic number 97 discovered?",
         "answers": {
-            a: ".map",
-            b: ".forEach",
-            c: ".reduce",
-            d: ".filter"
+            a: "Detroit, MI",
+            b: "Berkeley, CA",
+            c: "San Antonio, TX",
+            d: "Houston, TX"
         },
         "correctAnswer": "b",
-        "hint": "what are the behaviors of each higher order function",
+        "hint": "Look at the name of element 97!",
         "difficulty": 12
     },
     "2H": {
-        "question": "What is the proper way to declare a function?",
+        "question": "",
         "answers": {
             a: "<pre><code>function name = name (){...}</code></pre>",
             b: "<pre><code>function name {...}</code></pre>",
@@ -133,7 +133,7 @@ let biologyQuestionDict = {
         "difficulty": 2
     },
     "KH": {
-        "question": "Given the following function, what do you expect to be logged to the console? \n<pre><code>function uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase('the quick brown fox'));</code></pre>",
+        "question": "Given the following function, what do you expect to be logged to the console? \nfunction uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase('the quick brown fox'));",
         "answers": {
             a: "The quick brown fox",
             b: "THE QUICK BROWN FOX",
