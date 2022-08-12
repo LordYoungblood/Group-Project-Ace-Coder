@@ -40,6 +40,8 @@ const hideButtons = () =>{
     classesButton.hidden = true;
     functionsButton.hidden = true;
     hofButton.hidden = true;
+    mathBtn.hidden = true;
+    bioButton.hidden = true;
 }
 
 let totalScore = 0;
@@ -54,7 +56,8 @@ let arraysButton = document.getElementById('arrays-button');
 let classesButton = document.getElementById('classes-button');
 let hofButton = document.getElementById('hof-button');
 
-let mathBtn = document.getElementById('math-button')
+let mathBtn = document.getElementById('math-button');
+let bioButton = document.getElementById('biology-button');
 
 let currentQuestion = document.getElementById
     ('current-question')
@@ -153,6 +156,10 @@ buttonSetup(classesButton, 'AC,2C,KC', codeQuestionDict);
 buttonSetup(functionsButton, 'AD,2D,KD', codeQuestionDict);
 
 buttonSetup(hofButton, 'AH,2H,KH');
+
+buttonSetup(mathBtn, 'AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH', mathQuestionDict);
+
+buttonSetup(bioButton, 'AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH', biologyQuestionDict);
 // shufflebtn.addEventListener('click', function () {
 //     fetch("http://deckofcardsapi.com/api/deck/new/shuffle/?cards=AS,2S,KS,AD,2D,KD,AC,2C,KC,AH,2H,KH")
 //         .then(response => response.json())
