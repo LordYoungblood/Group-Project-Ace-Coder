@@ -12,89 +12,90 @@ let biologyQuestionDict = {
         "difficulty": 12
     },
     "2S": {
-        "question": "How do you create an empty array?",
+        "question": "What is the powerhouse of the cell?",
         "answers": {
-            a: "<pre><code>let array = [];</code></pre>",
-            b: "<pre><code>var arr = array;</code></pre>",
-            c: "<pre><code>const array;</code></pre>",
-            d: "<pre><code>console.log(empty array);</code></pre>"
+            a: "Mitochondria",
+            b: "Ribosome",
+            c: "Cytoplasm",
+            d: "RNA"
         },
         "correctAnswer": "a",
-        "hint": "What does an array look like?",
+        "hint": "Which organelle generates ATP?",
         "difficulty": 2
     },
     "KS": {
-        "question": "Given this code, which is the proper method to have one array containing all elements from both arrays? \n <pre><code>const Fruits = ['Banana', 'Strawberry', 'Apple', 'Oranges'] \n const Vegetables ['Tomato','Corn', 'Bell Pepper', 'Carrot']",
+        "question": "From what animal/organ did the discovery of CasRx originate?",
         "answers": {
-            a: ".map",
-            b: ".concat",
-            c: ".reduce",
-            d: ".slice"
+            a: "the hearts of cows in Wisconsin, USA",
+            b: "the guts of sheep in New Zealand",
+            c: "the livers of a rare fox species in Nanjing, China",
+            d: "the brains of butterflies living on Camp Bullis (San Antonio, TX)"
         },
         "correctAnswer": "b",
-        "hint": "Think about how each method handles the array, and what the return of each method looks like",
+        "hint": "Check out some YouTube lectures by Dr. Patrick Hsu!",
         "difficulty": 11
     },
     "AD": {
-        "question": "What is the equivalent Async syntax for the following Promise statement:\n<pre><code>function myFunction() {\n  return Promise.resolve('Hello');\n}</code></pre>",
+        "question": "What is the state-of-the-art ML model for predicting protein folding?",
         "answers": {
-            a: `<pre><code>async function myFunction() {\n return "Hello";\n}</code></pre>`,
-            b: `<pre><code>function async myFunction() {\n return "Hello";\n}</code></pre>`,
-            c: `<pre><code>async function myFunction().then( {\n return "Hello";\n);}</code></pre>`,
-            d: `<pre><code>function async myFunction().then ( {\n return "Hello";\n);}</code></pre>`
+            a: `AlphaFold2`,
+            b: `ProteinFold`,
+            c: `AminoAcidFolds`,
+            d: `FoldingAA`
         },
         "correctAnswer": "a",
-        "hint": "Remember, functions are executed in the order called - not in the order defined.",
+        "hint": "What has Google been up to in the past few years?",
         "difficulty": 12
     },
     "2D": {
-        "question": `Given the following code, what is the expected output from myDisplayer( )?<pre><code>function myFirst() {\nmyDisplayer("Hello");\n}\nfunction mySecond() {\nmyDisplayer("Goodbye");\n}\n\nmySecond();\nmyFirst();`,
+        "question": `What does CASP stand for?`,
         "answers": {
-            a: "Goodbye",
-            b: "Hello",
-            c: "__________",
-            d: "undefined"
+            a: "Continous Assesment of the Structure of Proteins",
+            b: "Constant Analysis of the Structure of Proteins",
+            c: "Critical Assessment of Protein Structure Prediction",
+            d: "Continental US Society of Protein Structures"
         },
-        "correctAnswer": "b",
-        "hint": "Remember, functions are executed in the order called - not in the order defined.",
+        "correctAnswer": "c",
+        "hint": "Try googling the CASP competition!",
         "difficulty": 2
     },
     "KD": {
-        "question": `Given the following code, what would be a more efficient way to provide input #'s and display the result?'<pre><code>function myDisplayer(some) {\n  document.getElementById("demo").innerHTML = some;\n}\nfunction myCalculator(num1, num2) {\n  let sum = num1 + num2;\n  return sum;\n}\nlet result = myCalculator(5, 5);\nmyDisplayer(result);</code></pre>`,
+        "question": "What is a hammerhead ribozyme?",
         "answers": {
-            a: "Adding a function call in the first line of <pre><code>myCalculator(), myDisplayer(result)</code></pre>",
-            b: "Adding a function call in the first line of <pre><code>myCalculator(), myDisplayer(result)</code></pre>",
-            c: "Adding a function call in the last line of <pre><code>myCalculator(), myDisplayer(sum)</code></pre>",
-            d: "Nothing, it's perfect the way it is!"
+            a: "An enzyme that can generate enzymes of a particular shape that play a large part in carbohydrate metabolism",
+            b: "A type of hammerhead shark",
+            c: "A type of ribosome that can convert adipose tissue to muscular tissue via cellular respiration",
+            d: "A ribozyme that can cleave itself, which plays a part in creating genetic logic gates"
         },
-        "correctAnswer": "c",
-        "hint": "Remember, calling functions within functions can eliminate some complexity in your code.",
+        "correctAnswer": "d",
+        "hint": "What may the hammerhead shape of this molecule allow it to do?",
         "difficulty": 11
     },
     "AC": {
-        "question": "What is the indicator to allow use of parent methods within a child class?",
+        "question": "Which US university has the BEST computational biologists in the world? #gobears",
         "answers": {
-            a: "super",
-            b: "subclass",
-            c: "get",
-            d: "extends"
+            a: "Harvard",
+            b: "Stanford",
+            c: "Penn State",
+            d: "UC-Berkeley"
         },
         "correctAnswer": "a",
-        "hint": "think about how inheritance is used to define a child class from a parent class",
+        "hint": "Check out Dr. Chris Anderson, Dr. Liana Lareau, Dr. Ian Holmes, and Dr. Adam Arkin!",
         "difficulty": 12
     },
     "2C": {
-        "question": "What is the proper syntax to define a new class?",
+        "question": "What are the universal logic gates?",
         "answers": {
-            a: "<pre><code>class = ClassName { \n constructor() {...} \n }</code></pre>",
-            b: "<pre><code>class ClassName { \n constructor() {...} \n }</code></pre>",
-            c: "<pre><code>class ClassName = { \n constructor() {...} \n }</code></pre>",
-            d: "<pre><code>class ClassName { \n constructor = () {...} \n }</code></pre>"
+            a: "NAND and NOR",
+            b: "AND and THEN",
+            c: "OR and IF",
+            d: "IF and THEN"
         },
-        "correctAnswer": "b",
-        "hint": "look carefully at how a class is defined and what is necessary to define the class",
+        "correctAnswer": "a",
+        "hint": "What logic can be used to construct any outcome?",
         "difficulty": 2
     },
+    ////got to here with bio questions
     "KC": {
         "question": "If a class contains a private property, what are the two method types that will allow for those private properties to be accessed?",
         "answers": {
