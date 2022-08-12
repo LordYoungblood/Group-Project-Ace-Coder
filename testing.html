@@ -34,3 +34,60 @@
       </form>
     </div>
   </nav>
+
+  <div id="game-questions" hidden="true">
+    <!-- The deck is shuffled! Click draw card to begin! -->
+    <div id="question-block">question</div>
+    <button id="a" type= "button" class="btn btn-secondary btn-block">A</button>
+    <button id="b" type= "button" class="btn btn-secondary btn-block">B</button>
+    <button id="c" type= "button" class="btn btn-secondary btn-block">C</button>
+    <button id="d" type= "button" class="btn btn-secondary btn-block">D</button>
+  </div>
+
+  .btn, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .9% .9%;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: rgb(7, 160, 81); }
+
+
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }

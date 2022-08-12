@@ -24,7 +24,6 @@ body {
 
 h1{
   color: #F0EBE3;
-  font-family: 'Sacramento', cursive;
   position: absolute;
   left: 38%;
   font-size : 50px;
@@ -48,11 +47,13 @@ h1{
 }
 
 #ace-coder{
-  width: 30%;
+  height: 10%;
+  width: 20%;
   left: 40%;
-  color: black;
-  background-color: rgb(0, 0, 0, .4);
-  text-shadow: 2px 2px green;
+  padding: 2px;
+  color: green;
+  border-radius: 10% 50%;
+  text-shadow: 2px 4px black;
   text-align: center;
 
 }
@@ -118,6 +119,11 @@ h1{
   display: inline-block;
 }
 
+#draw-button:hover, #help-button:hover, .btn:hover{
+  color: white;
+  cursor: pointer;
+  background-color: green;
+}
 
 #game-controls{
   display: inline;
@@ -126,17 +132,68 @@ h1{
   left: 40%;
   width: 20%;
 }
+/* #draw-button, #shuffle-button, #arrays-button, #classes-button, #functions-button, #hof-button, #help-button */
 
-#game-controls #draw-button, #shuffle-button, #arrays-button, #classes-button, #functions-button, #hof-button{
+#draw-button, #help-button, .btn{
   color: green;
   background-color: black;
     border-radius: 5%;  
     border-color: green;
+    transition: ease-out 0.1s;
     box-shadow: 0 0 10px 2px green;
 }
 #alert-container{
   height: 10%;
 }
+
+
+#test2{
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  border-radius: 5%;
+  transition: ease-out 0.3s;
+  font-size: 1em;
+  outline: none;
+  border: 3px solid green;
+  background-color: black;
+  z-index: 1;
+  color: green;
+
+}
+
+#test2:hover{
+  color: black;
+  cursor: pointer;
+}
+
+#test2:hover{
+  color: white;
+  cursor: pointer;
+}
+
+#test2:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: green;
+
+}
+#test2:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
 
 /* .btn, .btn:visited {
   text-transform: uppercase;
@@ -166,7 +223,7 @@ h1{
   background-color: #fff;
   color: #777; }
   .btn--white::after {
-    background-color: rgb(255, 1, 1); }
+    background-color: rgb(7, 160, 81); }
 
 
 

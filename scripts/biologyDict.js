@@ -121,27 +121,27 @@ let biologyQuestionDict = {
         "difficulty": 12
     },
     "2H": {
-        "question": "",
+        "question": "What the four DNA bases?",
         "answers": {
-            a: "<pre><code>function name = name (){...}</code></pre>",
-            b: "<pre><code>function name {...}</code></pre>",
-            c: "<pre><code>function name() = {...}</code></pre>",
-            d: "<pre><code>function name () {...}</code></pre>"
+            a: "A, C, G, T",
+            b: "A, B, C, D",
+            c: "Z, T, R, B",
+            d: "DNA doesn't have bases."
         },
-        "correctAnswer": "d",
-        "hint": "think about what elements constitute a function and how it is called",
+        "correctAnswer": "a",
+        "hint": "These are building blocks of the genetic code.",
         "difficulty": 2
     },
     "KH": {
-        "question": "Given the following function, what do you expect to be logged to the console? \nfunction uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase('the quick brown fox'));",
+        "question": "What is a reaction operator?",
         "answers": {
-            a: "The quick brown fox",
-            b: "THE QUICK BROWN FOX",
-            c: "The Quick Brown Fox",
-            d: "the quick brown fox"
+            a: "A type of surgical equipment that slows down enzymatic reactions in a patient's body",
+            b: "A specific type of enzyme that accelerates chemical reactions.",
+            c: "A description of a transformation that occurs during a reaction.",
+            d: "A lab tool used for generating images of microscopic organisms."
         },
         "correctAnswer": "c",
-        "hint": "look at the element and index being called from the array, how do the .uppercase and .slice methods behave?",
+        "hint": "How might we analyze chemical reactions in an organized way?",
         "difficulty": 11
     }
 

@@ -43,8 +43,8 @@ const hideButtons = () =>{
     classesButton.hidden = true;
     functionsButton.hidden = true;
     hofButton.hidden = true;
-    // mathBtn.hidden = true;
-    // bioButton.hidden = true;
+    mathBtn.hidden = true;
+    bioButton.hidden = true;
 }
 
 let totalScore = 0;
@@ -79,11 +79,11 @@ const buttonSetup = (button, fetchString, questionDict) => {
             .then(deck_ID => {
                 hideButtons();
                 if(button === bioButton){
-                    document.body.style['background-image'] = 'url(../pictures/background.jpg)';
+                    document.body.style['background-image'] = 'url(../pictures/DNA.jpeg)';
                     helpbtn.hidden = true;
                 }
                 if(button === mathBtn){
-                    document.body.style['background-image'] = 'url(../pictures/background.jpg)';
+                    document.body.style['background-image'] = 'url(../pictures/Math-Mathematics-Formula-Wallpaper-for-PC.jpeg)';
                     helpbtn.hidden = true;
                 }
 
