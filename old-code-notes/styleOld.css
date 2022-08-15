@@ -1,3 +1,62 @@
+/* 
+Cool Click box effect that lights up when you click on it.
+  #test2{
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  border-radius: 5%;
+  transition: ease-out 0.3s;
+  font-size: 1em;
+  outline: none;
+  border: 3px solid green;
+  background-color: black;
+  z-index: 1;
+  color: green;
+
+}
+
+#test2:hover{
+  color: black;
+  cursor: pointer;
+}
+
+#test2:hover{
+  color: white;
+  cursor: pointer;
+}
+
+#test2:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: green;
+
+}
+#test2:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+} */
+
+
+
+
+
+
+
+
+
+
+
 /* #draw-button{
   background-color: #F0EBE3;
   color: #7D9D9C;

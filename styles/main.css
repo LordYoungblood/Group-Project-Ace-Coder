@@ -5,13 +5,84 @@
   box-sizing: border-box;
 }
 
+.main{
+  color: green;
+
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 60px;
+  transition: 0.5s;
+  overflow-x: hidden;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: green;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: greenyellow;
+}
+
+.sidebar.is-opened {
+  width: 250px;
+  /* Full width */
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar.is-opened + .main {
+  /* Sidebar overlay */
+  margin-left: 250px;
+  /* Move main */
+  transition: margin-left 0.5s;
+  /* Hide main */
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.sidebar .closeSidebarButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #818181;
+  cursor: pointer;
+}
+
+.sidebar .closeSidebarButton:hover {
+  color: greenyellow;
+}
+
+.toggler {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.main {
+  height: 100vh;
+  padding: 25px;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   height: 95vh;
-  background-image: url(../pictures/coding.jpeg);
+  background-image: url(../pictures/future-background.png);
   background-size: cover;
 }
 
@@ -30,6 +101,7 @@ h1{
   top: 10%;
 }
 
+
 #score-container{
   position: absolute;
   text-align: center;
@@ -46,6 +118,19 @@ h1{
   
 }
 
+#score{
+  animation:blink 5s linear infinite; 
+}
+@keyframes blink{
+  50%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 05;
+  }
+
+}
+
 #ace-coder{
   height: 10%;
   width: 20%;
@@ -60,7 +145,6 @@ h1{
 
 #card-img{
   padding-top: 2%;
-  /* padding-left: 2%; */
   position: absolute;
   left: 42.5%;
   top: 17%;
@@ -93,7 +177,6 @@ h1{
   background-color:black ;
   padding: 10px;
   border-radius: 5%;                    /* 5%;  */
-  /* border: 5px inset #F0EBE3; */
   box-shadow: 0 0 10px 5px green;
  
 }
@@ -104,25 +187,35 @@ h1{
   padding: 5px
 }
 
+#game-questions:hover #a:hover, #b:hover, #c:hover, #d:hover{
+  color: white;
+  cursor: pointer;
+  background-color: green;
+}
+
 #game-questions #a, #b, #c, #d{
   color: green;
   background-color: black;
     border-radius: 5%;  
     border-color: green;
+    transition: ease-out 0.1s;
     box-shadow: 0 0 10px 2px green;
 }
 
-.button-test:visited{
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;
-}
 
 #draw-button:hover, #help-button:hover, .btn:hover{
   color: white;
   cursor: pointer;
   background-color: green;
+}
+
+#draw-button, #help-button, .btn{
+  color: green;
+  background-color: black;
+    border-radius: 5%;  
+    border-color: green;
+    transition: ease-out 0.1s;
+    box-shadow: 0 0 10px 2px green;
 }
 
 #game-controls{
@@ -134,115 +227,10 @@ h1{
 }
 /* #draw-button, #shuffle-button, #arrays-button, #classes-button, #functions-button, #hof-button, #help-button */
 
-#draw-button, #help-button, .btn{
-  color: green;
-  background-color: black;
-    border-radius: 5%;  
-    border-color: green;
-    transition: ease-out 0.1s;
-    box-shadow: 0 0 10px 2px green;
-}
+
 #alert-container{
   height: 10%;
 }
-
-
-#test2{
-  display: inline;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20%;
-  border-radius: 5%;
-  transition: ease-out 0.3s;
-  font-size: 1em;
-  outline: none;
-  border: 3px solid green;
-  background-color: black;
-  z-index: 1;
-  color: green;
-
-}
-
-#test2:hover{
-  color: black;
-  cursor: pointer;
-}
-
-#test2:hover{
-  color: white;
-  cursor: pointer;
-}
-
-#test2:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: "";
-  background-color: green;
-
-}
-#test2:hover:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: -1;
-}
-
-
-/* .btn, .btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: .9% .9%;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.4rem;
-  border: none;
-  cursor: pointer; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
-
-.btn:active, .btn:focus {
-  outline: none;
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: rgb(7, 160, 81); }
-
-
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; } */
-
 
 
 
