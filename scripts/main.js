@@ -3,7 +3,7 @@ import { codeQuestionDict } from "./codeQuestionDict.js";
 import { mathQuestionDict } from "./mathDict.js";
 import { biologyQuestionDict } from "./biologyDict.js";
 
-const checkCorrect = (button, rightAnswer, hint, multiplier) => {
+export const checkCorrect = (button, rightAnswer, hint, multiplier) => {
     console.log('but id: ', button.id)
     if (button.id === rightAnswer) {
 
@@ -252,4 +252,3 @@ mathBtn.addEventListener('click', function () {
 })
 
 
-module.exports = {checkCorrect};

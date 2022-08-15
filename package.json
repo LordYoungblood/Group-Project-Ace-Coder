@@ -2,9 +2,9 @@
   "name": "sdi-blended-project1-scaffold",
   "version": "1.0.0",
   "description": "SDI Project 1",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "start": "live-server ."
   },
   "repository": {
@@ -20,6 +20,11 @@
   "dependencies": {
     "bootstrap": "^5.2.0",
     "jest": "^28.1.3",
+    "jsdom": "^20.0.0",
     "node-fetch": "^3.2.10"
+  },
+  "type" : "module",
+  "jest" : {
+    "transform": {}
   }
 }

@@ -71,6 +71,20 @@
   border-radius: 40%;
 }
 
+.Home{
+  font-size: 30px;
+  cursor: pointer;
+  color: green;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5%;
+  border-radius: 40%;
+
+}
+
+.Home:hover{
+  cursor: pointer;
+}
+
 .main {
   height: 100vh;
   padding: 25px;

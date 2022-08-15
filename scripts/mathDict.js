@@ -115,7 +115,7 @@ let mathQuestionDict = {
             c: "1",
             d: "undefined"
         },
-        "correctAnswer": "b",
+        "correctAnswer": "c",
         "hint": "what are the behaviors of each higher order function",
         "difficulty": 12
     },
