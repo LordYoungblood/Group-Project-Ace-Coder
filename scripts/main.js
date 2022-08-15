@@ -88,7 +88,7 @@ const buttonSetup = (button, fetchString, questionDict) => {
                     helpbtn.hidden = true;
                 }
                 if(button === mathBtn){
-                    document.body.style['background-image'] = 'url(../pictures/Math-Mathematics-Formula-Wallpaper-for-PC.jpeg)';
+                    document.body.style['background-image'] = 'url(../pictures/math1.webp)';
                     helpbtn.hidden = true;
                 }
 
