@@ -28,66 +28,23 @@
     </div>
   </div>
 
-  <div class="sidebar">
-    <span class="closeSidebarButton">&times;</span>
-    <a href="#">Home</a>
-    <a href="#" id="math-button">Math Deck<span class="sr-only">(current)</span></a>
-    <a href="#" id="biology-button">Biology Deck<span class="sr-only">(current)</span></a>
-  </div>
-  <div class="main">
-    <span class="toggler">&#9776; Menu</span>
-  </div>
-  <script src="scripts/theme.js"></script>
+  <nav>
+    <div class="sidebar">
+      <span class="closeSidebarButton">&times;</span>
+      <a href="#" id="math-button">Math Deck<span class="sr-only">(current)</span></a>
+      <a href="#" id="biology-button">Biology Deck<span class="sr-only">(current)</span></a>
+    </div>
 
-    <!-- <div id = "navbar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Ace Coder</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a> -->
-
-        <div class="nav-item dropdown">
-          <a class= "nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Deck Options
-          </a>
-          <div class ="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <!-- <a class="dropdown-item" href="#" id="code-button">Code Deck<span class="sr-only">(current)</span></a> -->
-            <a class="dropdown-item" href="#" id="math-button">Math Deck<span class="sr-only">(current)</span></a>
-            <a class="dropdown-item" href="#" id="biology-button">Biology Deck<span class="sr-only">(current)</span></a>
-          
-
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <li class="nav-item active">
-                <a class="nav-link" href="#" id="code-button">Code Deck<span class="sr-only">(current)</span></a>
-              </li>
-              <a class="nav-link" href="#" id="math-button">Math Deck<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#" id="biology-button">Biology Deck<span class="sr-only">(current)</span></a>
-              </li> -->
-              <!-- <li class="nav-item active">
-                <a class="nav-link" href="#"> Arrays <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"> Higher Order Functions <span class="sr-only">(current)</span></a>
-              </li> -->
-        </div>
-      </nav>
-    </div> -->
-
-    <!-- <div id="alert-container"></div> -->
-  </header> <!-- <div id="wrong-container"></div> -->
+    <div class="main">
+      <!-- can change back to <span to take off buttonlast minute revision -->
+      <span class="toggler" >&#9776; Menu</span>
+      <a href="./index.html" class ="toggler">Home</a>
+    </div>
+      <script src="scripts/theme.js"></script>
+    </div>
+  </nav>
+   
+  </header> 
 
   <div id ="cardimg2" >
     <img id ="card-img" src="pictures/future-cardback.png" alt="card2">
@@ -95,13 +52,10 @@
   
   <div id="game-container">
     <div id="game-board">
-
       <div id="player-1-card-1" ></div>
-
-      <div id="player-1-card-2"></div>
-      <!-- <img id="card-img" > -->
-    
+      <div id="player-1-card-2"></div>    
     </div>
+
     <div id="game-controls">
       <button id="draw-button" hidden="true" type= "button" class="btn  btn-block">Draw Card</button>
       <button id="shuffle-button" type= "button" class="btn btn-block" >Shuffle Deck</button>
@@ -112,17 +66,6 @@
       <button id="help-button" type= "button" class="btn btn-block" hidden="true">Help</button>
     </div>
 
-    <!-- <div id="game-controls">
-      <button id="draw-button" hidden="true" type= "button" class="btn btn--white btn--animated">Draw Card</button>
-      <button id="shuffle-button" type= "button" class="btn btn--white btn--animated" >Shuffle Deck</button>
-      <button id="arrays-button" type= "button" class="btn btn--white btn--animated" >Arrays</button>
-      <button id="classes-button" type= "button" class="btn btn--white btn--animated" >Classes</button>
-      <button id="functions-button" type= "button" class="btn btn--white btn--animated" >Functions</button>
-      <button id="hof-button" type= "button" class="btn btn--white btn--animated" >Higher Order Functions</button>
-      <button id="help-button" type= "button" class="btn btn--white btn--animated" >Help</button>
-    </div> -->
-
-    
     <div id="game-questions" hidden="true">
       <!-- The deck is shuffled! Click draw card to begin! -->
       <div id="question-block">Questions</div>
@@ -132,12 +75,7 @@
       <button id="d" type= "button" class="btn btn-secondary btn-block">D</button>
     </div>
 
-
-
 <script  src = 'scripts/main.js' type="module"></script>
 
-
-
 </body>
-
 </html>

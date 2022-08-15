@@ -132,7 +132,7 @@ let codeQuestionDict = {
         "difficulty": 2
     },
     "KH": {
-        "question": "Given the following function, what do you expect to be logged to the console? \nfunction uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase('the quick brown fox'));",
+        "question": "Given the following function, what do you expect to be logged to the console? \n<pre><code>function uppercase(string){ \n var array1 = str.split(' '); \n var newArray1 = []; \n\nfor(var x =0; x < newArray1.length; x++){ \n newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1)); \n} \n return newarray1.join(' '); \n} \n console.log(uppercase('the quick brown fox'));",
         "answers": {
             a: "The quick brown fox",
             b: "THE QUICK BROWN FOX",

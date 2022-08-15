@@ -7,7 +7,6 @@
 
 .main{
   color: green;
-
 }
 
 .sidebar {
@@ -39,16 +38,13 @@
 .sidebar.is-opened {
   width: 250px;
   /* Full width */
-  width: 100%;
+  width: 20%;
   text-align: center;
 }
 
 .sidebar.is-opened + .main {
-  /* Sidebar overlay */
   margin-left: 250px;
-  /* Move main */
   transition: margin-left 0.5s;
-  /* Hide main */
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -69,6 +65,10 @@
 .toggler {
   font-size: 30px;
   cursor: pointer;
+  color: green;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5%;
+  border-radius: 40%;
 }
 
 .main {
@@ -82,16 +82,9 @@ body {
   font-size: 16px;
   line-height: 1.7;
   height: 95vh;
-  background-image: url(../pictures/future-background.png);
+  background-image: url(../pictures/movingcircut.gif);
   background-size: cover;
 }
-
-/* .header {
-  /* height: 95vh;
-
-  background-image: url(../pictures/background.jpg);
-  background-size: cover;
-} */
 
 h1{
   color: #F0EBE3;
@@ -99,6 +92,10 @@ h1{
   left: 38%;
   font-size : 50px;
   top: 10%;
+}
+
+pre{
+  color: yellow;
 }
 
 
@@ -115,12 +112,12 @@ h1{
   border-radius: 5%; 
   border: 5px inset green;
   box-shadow: 0 0 10px 2px green;
-  
 }
 
 #score{
   animation:blink 5s linear infinite; 
 }
+
 @keyframes blink{
   50%{
     opacity: 0;
@@ -133,9 +130,8 @@ h1{
 
 #ace-coder{
   height: 10%;
-  width: 20%;
-  left: 40%;
-  padding: 2px;
+  width: 30%;
+  left: 35.7%;
   color: green;
   border-radius: 10% 50%;
   text-shadow: 2px 4px black;
@@ -148,25 +144,8 @@ h1{
   position: absolute;
   left: 42.5%;
   top: 17%;
-  max-height: 50%;
-  width: 15%; 
-
-  /* animation: moveInLeft;
-  animation-duration: 5s; */
+  max-height: 50%;  width: 15%; 
   }
-
-  /* @keyframes moveInLeft{
-    0%{
-      transform: translateX(-100px);
-    }
-    80%{
-
-    }
-    100%{
-      opacity: 1;
-      transform: translateX(0);
-    }
-  } */
 
 #game-questions{
   position: absolute;
@@ -177,9 +156,9 @@ h1{
   background-color:black ;
   padding: 10px;
   border-radius: 5%;                    /* 5%;  */
-  box-shadow: 0 0 10px 5px green;
- 
+  box-shadow: 0 0 10px 5px green; 
 }
+
 #question-block{
   background-color: black;
   color: green;
@@ -225,8 +204,6 @@ h1{
   left: 40%;
   width: 20%;
 }
-/* #draw-button, #shuffle-button, #arrays-button, #classes-button, #functions-button, #hof-button, #help-button */
-
 
 #alert-container{
   height: 10%;
